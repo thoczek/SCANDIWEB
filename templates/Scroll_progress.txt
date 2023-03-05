@@ -1,0 +1,51 @@
+HTML################################################################
+
+<head>
+
+<script>
+      window.addEventListener(
+        "scroll",
+        () => {
+          document.body.style.setProperty(
+            "--scroll",
+            window.pageYOffset /
+              (document.body.offsetHeight - window.innerHeight)
+          );
+        },
+        false
+      );
+    </script>
+
+</head>
+<body> 
+
+<div class="progress"></div>
+
+</body>
+
+
+CSS############################################################
+
+.progress {
+  height: 3px;
+  width: 0%;
+  background-color: var(--blue-slash);
+  position: fixed;
+  top: 0rem;
+  left: 0;
+  animation: progress 1s linear;
+  /* Pause the animation */
+  animation-play-state: paused;
+  /* Bind the animation to scroll */
+  animation-delay: calc(var(--scroll) * -1s);
+  /* These last 2 properites clean up overshoot weirdness */
+  animation-iteration-count: 1;
+  animation-fill-mode: both;
+  z-index: 2;
+}
+@keyframes progress {
+  to {
+    background-color: var(--blue-slash);
+    width: 100%;
+  }
+}

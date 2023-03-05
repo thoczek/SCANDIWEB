@@ -1,0 +1,173 @@
+<div class="header-menu">
+          <nav class="header-navigation">
+            <ul>
+              <li><a href="#home-scroll">Home</a></li>
+              <li><a href="#offer">Oferta</a></li>
+              <li><a href="#about">O&nbspmnie</a></li>
+              <li><a href="#contact">Kontakt</a></li>
+              <!-- <li><a href="">Galeria</a></li> -->
+            </ul>
+          </nav>
+          <!-- Hamburger -->
+          <input type="checkbox" id="hmchecbox" class="hamburger-menu" />
+        <label for="hmchecbox" class="hamburger-menu">
+          <div class="hamburger-button"></div>
+          <div class="hamburger-button"></div>
+          <div class="hamburger-button"></div>
+        </label>
+        <nav class="hamburger-menu">
+          <ul>
+            <li><a href="#home-scroll">Home</a></li>
+            <li><a href="#offer">Oferta</a></li>
+            <li><a href="#about">O&nbspmnie</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+            <!-- <li><a href="">Galeria</a></li> -->
+          </ul>
+        </nav>
+        </div>
+
+
+/*-------------------------------------------------
+Styles
+--------------------------------------------------*/
+div.header-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+  flex-grow: 1;
+}
+nav.header-navigation {
+  display: flex;
+  /* border: 1px solid green; */
+}
+nav.header-navigation > ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav.header-navigation > ul > li {
+  display: flex;
+}
+nav.header-navigation > ul > li > a {
+  font-size: 1.5rem;
+  padding-right: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-decoration: none;
+  color: var(--secondary-blue);
+  transition: all 0.5s;
+}
+nav.header-navigation > ul > li > a:hover {
+  color: var(--primary-yellow);
+  transform: scale(1.1);
+}
+nav.hamburger-menu {
+  display: none;
+  overflow: hidden;
+}
+
+input.hamburger-menu {
+  display: none;
+  overflow: hidden;
+}
+
+*-------------------------------------------------
+Media Queries
+--------------------------------------------------*/
+
+@media (max-width: 69rem) {
+/*-------------------------------------------------
+    Hamburger menu
+    --------------------------------------------------*/
+  label.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    /* border: 3px solid black; */
+    overflow: hidden;
+  }
+  div.hamburger-button {
+    width: 2rem;
+    border: 0.4rem solid black;
+    background-color: black;
+    border-radius: 1rem;
+    transition: all 1s ease-in-out;
+  }
+  input.hamburger-menu:checked
+    ~ label.hamburger-menu
+    div.hamburger-button:first-child {
+    border: 0.4rem solid red;
+    transform: translate(0, 1rem) rotateZ(-45deg);
+    transition: all 0.5s ease-in-out 0.2s;
+  }
+  input.hamburger-menu:checked
+    ~ label.hamburger-menu
+    div.hamburger-button:nth-child(2) {
+    /* display: none; */
+    /* opacity: 0; */
+    transform: translate(4rem, 0);
+    transition: all 0.2s ease-in-out;
+  }
+  input.hamburger-menu:checked
+    ~ label.hamburger-menu
+    div.hamburger-button:last-child {
+    border: 0.4rem solid blue;
+    transform: translate(0, -1rem) rotate(45deg);
+    transition: all 0.8s ease-in-out 0.2s;
+  }
+  input.hamburger-menu:checked ~ nav.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 6.5rem;
+    left: 0;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 2rem;
+    /* border: 1px solid red; */
+    width: 100%;
+    height: auto;
+    background-color: #f7c61d;
+  }
+  input.hamburger-menu:checked ~ nav.hamburger-menu > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* position: fixed; */
+    top: 6.5rem;
+    left: 0;
+    padding-bottom: 5rem;
+    /* width: 3rem; */
+  }
+
+  nav.hamburger-menu > ul > li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    /* border: 1px solid black; */
+    /* background-color: #f7c61d; */
+  }
+  nav.hamburger-menu > ul > li > a {
+    display: flex;
+    /* font-family: Proxima_Nova; */
+    font-size: 2rem;
+    line-height: 6.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--secondary-blue);
+    transition: ease-out 0.1s;
+  }
+
+  nav.hamburger-menu > ul > li > a:hover {
+    color: var(--fourth-white);
+    text-shadow: -2px 2px var(--secondary-blue);
+  }
+}
