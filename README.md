@@ -1,2 +1,2 @@
 # SCANDIWEB
- WebDeveloper Test
+ PHP OOP Webpage implementing simple MVC framework
