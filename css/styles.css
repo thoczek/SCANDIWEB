@@ -2,12 +2,12 @@
 Fonts
 --------------------------------------------------*/
 
-/*
+
 @font-face {
-    font-family: Proxima_Nova;
-    src: url("../fonts/Proxima Nova/ProximaNova-Regular.woff");
+    font-family: Patrick_Hand;
+    src: url("../fonts/PatrickHand-Regular.ttf");
 }
-*/
+
 
 /*-------------------------------------------------
 CSS Reset
@@ -153,31 +153,38 @@ table {
 /*-------------------------------------------------
 Styles
 --------------------------------------------------*/
-html {
-  scroll-behavior: smooth;
-}
-body {
-  box-sizing: border-box;
-  font-family: Nurito;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 :root {
   /*-------------------------------------------------
 Colors definition
 --------------------------------------------------*/
-  --primary: #f7c61d;
-  --secondary: #00394f;
+  --primary: white;
+  --secondary: black;
   --third: #000000;
   --fourth: #ffffff;
   /*-------------------------------------------------
 Fonts definition
 --------------------------------------------------*/
-  --normal-font-family: Sans-serif;
+  --normal-font-family: Patrick_Hand;
   --headings-font-family: Serif;
   --style-font-family: Monospace;
+}
+  /*-------------------------------------------------
+Default styles
+--------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  box-sizing: border-box;
+  font-family: var(--normal-font-family);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.1em;
+}
+h1{
+  font-size: 2rem;
 }
 /*-------------------------------------------------
 Scrolls
@@ -192,25 +199,118 @@ Scrolls
   scroll-margin: 6rem;
 }
 /*-------------------------------------------------
+Wrappers
+--------------------------------------------------*/
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  align-items: center;
+  justify-content:start;
+  /* background-color: red;*var(--primary); */
+  box-sizing: border-box;
+  color: var(--secondary);
+}
+.content-wrapper{
+  display: flex;
+  flex-direction: column;
+  width:1200px;
+  align-items: center;
+  justify-content:start;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+/*-------------------------------------------------
 Header
 --------------------------------------------------*/
+.header-wrapper{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: space-between;
+  align-items: end;
+  box-sizing: border-box;
+  height:5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--secondary);
+  /* border: 1px solid blue; */
+}
+.button-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  flex-grow: 1;
+  box-sizing: border-box;
+  /* border: 1px solid green; */
+}
+.button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  box-sizing: border-box;
+  /* border: 1px solid pink; */
+}
+.header-button{
+  font-family: var(--normal-font-family);
+  line-height: 1rem;
+  padding:0.3rem 0.6rem;
+  border:1px solid var(--secondary);
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  box-shadow: 3px 3px var(--secondary);
+}
 
 /*-------------------------------------------------
 Main
 --------------------------------------------------*/
-
-/*-------------------------------------------------
-Articles
---------------------------------------------------*/
-
-/*-------------------------------------------------
-Aside
---------------------------------------------------*/
-
+.body-wrapper{
+  display: flex;
+  width:100%;
+  /* min-height: calc(100vh - 11rem); */
+  /* border: 1px solid red; */
+}
+.prl-body-grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2rem;
+  width:100%;
+  padding:1rem 0 ;
+    /* border: 2px solid rgb(37, 15, 116); */
+}
+.prl-body-product-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding:1rem;
+  border: 2px solid var(--secondary);
+}
+.prl-body-product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding:0 1rem 1rem 2rem;
+  flex-grow: 1;
+  line-height: 1.5rem;
+  /* border: 1px solid rgb(37, 15, 116); */
+}
+.delete-checkbox{
+align-self: start;
+justify-self: start;
+}
 /*-------------------------------------------------
 Footer
 --------------------------------------------------*/
-
+.footer-wrapper{
+display: flex;
+justify-content: center;
+width:100%;
+padding: 2rem 0;
+border-top: 1px solid var(--secondary);
+}
 /*-------------------------------------------------
 Media Queries
 --------------------------------------------------*/
