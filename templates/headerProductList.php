@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="../css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="../css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/stylesProductList.css" />
+    <link rel="stylesheet" type="text/css" href="css/all.min.css" />
     <title>Product List</title>
       <meta
       name="description"
@@ -18,5 +18,6 @@
     <meta name="author" content="Tadeusz Hoczek" />
     <meta name="copyright" content="Tadeusz Hoczek" />
   </head>
-
   <body>
+  <script src="script/jquery-3.6.4.min.js"></script>
+  <script src="script/scriptProductList"></script>
