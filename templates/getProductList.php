@@ -1,3 +1,4 @@
+<div class="prl-body-grid">
 <?php   
     $elements=[["SKU_VAL1","ITEM_NAME","PRICE","PROPERTY"],
                 ["SKU_VAL2","ITEM_NAME","PRICE","PROPERTY"],
@@ -16,3 +17,4 @@
             </div>';
     }
 ?>
+</div>

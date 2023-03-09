@@ -19,5 +19,5 @@
     <meta name="copyright" content="Tadeusz Hoczek" />
   </head>
   <body>
-  <script src="script/jquery-3.6.4.min.js"></script>
-  <script src="script/scriptProductList"></script>
+    <script src="script/jquery-3.6.4.min.js"></script>
+    <script src="script/scriptProductList"></script>

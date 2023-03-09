@@ -262,44 +262,30 @@ Header
   margin-left: 2rem;
   box-shadow: 3px 3px var(--secondary);
 }
-
 /*-------------------------------------------------
 Main
 --------------------------------------------------*/
 .body-wrapper{
   display: flex;
+  flex-direction: column;
   width:100%;
+  padding:1rem 0;
   /* min-height: calc(100vh - 11rem); */
   /* border: 1px solid red; */
 }
-.prl-body-grid{
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 2rem;
-  width:100%;
-  padding:1rem 0 ;
-    /* border: 2px solid rgb(37, 15, 116); */
-}
-.prl-body-product-wrapper{
+.form-inputs{
   display: flex;
-  flex-direction: column;
-  justify-content: start;
-  padding:1rem;
-  border: 2px solid var(--secondary);
+  justify-content: space-between;
+  width:300px;
+  padding:0 0 1rem;
+  /* border: 1px solid black; */
+
 }
-.prl-body-product{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: start;
-  padding:0 1rem 1rem 2rem;
-  flex-grow: 1;
-  line-height: 1.5rem;
-  /* border: 1px solid rgb(37, 15, 116); */
+.form-label{
+
 }
-.delete-checkbox{
-align-self: start;
-justify-self: start;
+.form-input{
+  margin-left:1rem;
 }
 /*-------------------------------------------------
 Footer

@@ -1,9 +1,10 @@
-jQuery(window).on("load", queryProductList());
+// Display form on page load
+jQuery(window).on("ready", queryProductList());
 
+//Display form on selector change
 $(document).ready(function(){
-    $('#submit').click(queryProductList());
+    $('#submit').on('click',queryProductList());
       });
-
 
 function queryProductList(){ 
         $.ajax({
@@ -14,10 +15,10 @@ function queryProductList(){
                 email : $('#email').val()
             },
             success : function(result){
-                $( "div.prl-body-grid" ).html( result );
+                $( "div.body-wrapper" ).html( result );
             },
             error : function() {
-                $( "div.prl-body-grid" ).html( "AJAX Error" );
+                $( "div.body-wrapper" ).html( "Error fetching data please reload page" );
             }
         }); 
         return false;

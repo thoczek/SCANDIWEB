@@ -13,26 +13,28 @@
             </div>
         </div>
         <div class="body-wrapper">
-            <div class="body-grid">
-                <?php   
-                $elements=[["SKU_VAL1","ITEM_NAME","PRICE","PROPERTY"],
-                            ["SKU_VAL2","ITEM_NAME","PRICE","PROPERTY"],
-                            ["SKU_VAL3","ITEM_NAME","PRICE","PROPERTY"],
-                            ["SKU_VAL2","ITEM_NAME","PRICE","PROPERTY"],
-                            ["SKU_VAL4","ITEM_NAME","PRICE","PROPERTY"]];
-                foreach ($elements as $element) {
-                    echo '<div class="body-product-wrapper"> 
-                                <input type="checkbox" class="delete-checkbox">
-                                <div class="body-product">
-                                    <p>'.$element[0].'</p>
-                                    <p>'.$element[1].'</p>
-                                    <p>'.$element[2].'</p>
-                                    <p>'.$element[3].'</p>
-                                </div>
-                        </div>';
-                }
-                ?>
-            </div>
+            <form id="product_form" method="post"></form>
+                <div class="sku-wrapper, form-inputs">
+                    <label for="sku" class="form-label">SKU</label><input type="text" name="form_sku" id="sku" class="form-input">
+                </div>
+                <div class="name-wrapper, form-inputs">
+                    <label for="name" class="form-label">Name</label><input type="text" name="form_name" id="name" class="form-input">
+                </div>
+                <div class="price-wrapper, form-inputs">
+                    <label for="price" class="form-label">Price(&dollar;)</label><input type="text" name="form_price" id="price" class="form-input">
+                </div>
+                <div class="type-switcher-wrapper, form-inputs">
+                    <label for="productType" class="form-label">Type Switcher</label>
+                    <select name="form_product_type" id="productType" class="form-input">
+                        <option id="DVD" selected="selected">DVD</option>
+                        <option id="Furniture">Furniture</option>
+                        <option id="Book">Book</option>
+                    </select>
+                </div>
+                <div class="ajax-form">
+                    <!-- Ajax loaded form goes here -->
+                </div>   
+            </form> 
         </div>
         <div class="footer-wrapper">
         Scandiweb Test assignment 

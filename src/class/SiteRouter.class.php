@@ -15,6 +15,7 @@ class SiteRouter{
 	}
 
 	public function getRoutes() {
+        echo $_SERVER["REQUEST_URI"]."<br>";
 		var_dump($this->routes);
 	}
 
