@@ -1,0 +1,319 @@
+/*-------------------------------------------------
+Fonts
+--------------------------------------------------*/
+
+
+@font-face {
+    font-family: Patrick_Hand;
+    src: url("../fonts/PatrickHand-Regular.ttf");
+}
+
+
+/*-------------------------------------------------
+CSS Reset
+--------------------------------------------------*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*-------------------------------------------------
+Styles
+--------------------------------------------------*/
+:root {
+  /*-------------------------------------------------
+Colors definition
+--------------------------------------------------*/
+  --primary: white;
+  --secondary: black;
+  --third: #000000;
+  --fourth: #ffffff;
+  /*-------------------------------------------------
+Fonts definition
+--------------------------------------------------*/
+  --normal-font-family: Patrick_Hand;
+  --headings-font-family: Serif;
+  --style-font-family: Monospace;
+}
+  /*-------------------------------------------------
+Default styles
+--------------------------------------------------*/
+html {
+  scroll-behavior: smooth;
+}
+body {
+  box-sizing: border-box;
+  font-family: var(--normal-font-family);
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  letter-spacing: 0.1em;
+}
+h1{
+  font-size: 2rem;
+}
+/*-------------------------------------------------
+Scrolls
+--------------------------------------------------*/
+#offer {
+  scroll-margin: 5rem;
+}
+#about {
+  scroll-margin: 6rem;
+}
+#contact {
+  scroll-margin: 6rem;
+}
+/*-------------------------------------------------
+Wrappers
+--------------------------------------------------*/
+.page-wrapper{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  align-items: center;
+  justify-content:start;
+  /* background-color: red;*var(--primary); */
+  box-sizing: border-box;
+  color: var(--secondary);
+}
+.content-wrapper{
+  display: flex;
+  flex-direction: column;
+  width:1200px;
+  align-items: center;
+  justify-content:start;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+/*-------------------------------------------------
+Header
+--------------------------------------------------*/
+.header-wrapper{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  justify-content: space-between;
+  align-items: end;
+  box-sizing: border-box;
+  height:5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--secondary);
+  /* border: 1px solid blue; */
+}
+.button-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  flex-grow: 1;
+  box-sizing: border-box;
+  /* border: 1px solid green; */
+}
+.button-container{
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  box-sizing: border-box;
+  /* border: 1px solid pink; */
+}
+.header-button{
+  font-family: var(--normal-font-family);
+  line-height: 1rem;
+  padding:0.3rem 0.6rem;
+  border:1px solid var(--secondary);
+  background-color: var(--primary);
+  color: var(--secondary);
+  font-size: 1rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  box-shadow: 3px 3px var(--secondary);
+}
+
+/*-------------------------------------------------
+Main
+--------------------------------------------------*/
+.body-wrapper{
+  display: flex;
+  width:100%;
+  /* min-height: calc(100vh - 11rem); */
+  /* border: 1px solid red; */
+}
+.prl-body-grid{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2rem;
+  width:100%;
+  padding:1rem 0 ;
+    /* border: 2px solid rgb(37, 15, 116); */
+}
+.prl-body-product-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding:1rem;
+  border: 2px solid var(--secondary);
+}
+.prl-body-product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding:0 1rem 1rem 2rem;
+  flex-grow: 1;
+  line-height: 1.5rem;
+  /* border: 1px solid rgb(37, 15, 116); */
+}
+.delete-checkbox{
+align-self: start;
+justify-self: start;
+}
+/*-------------------------------------------------
+Footer
+--------------------------------------------------*/
+.footer-wrapper{
+display: flex;
+justify-content: center;
+width:100%;
+padding: 2rem 0;
+border-top: 1px solid var(--secondary);
+}
+/*-------------------------------------------------
+Media Queries
+--------------------------------------------------*/
+
+@media (max-width: 69rem) {
+}
