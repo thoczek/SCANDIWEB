@@ -279,13 +279,17 @@ Main
   width:300px;
   padding:0 0 1rem;
   /* border: 1px solid black; */
-
-}
-.form-label{
-
 }
 .form-input{
   margin-left:1rem;
+}
+.ajax-form-wrapper{
+  display: flex;
+  flex-direction:column;
+}
+.product-description{
+  padding-top:1rem;
+
 }
 /*-------------------------------------------------
 Footer

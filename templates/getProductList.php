@@ -1,18 +1,13 @@
 <div class="prl-body-grid">
 <?php   
-    $elements=[["SKU_VAL1","ITEM_NAME","PRICE","PROPERTY"],
-                ["SKU_VAL2","ITEM_NAME","PRICE","PROPERTY"],
-                ["SKU_VAL3","ITEM_NAME","PRICE","PROPERTY"],
-                ["SKU_VAL2","ITEM_NAME","PRICE","PROPERTY"],
-                ["SKU_VAL4","ITEM_NAME","PRICE","PROPERTY"]];
-    foreach ($elements as $element) {
+    foreach ($this->result as $element) {
         echo '<div class="prl-body-product-wrapper"> 
                     <input type="checkbox" class="delete-checkbox">
                     <div class="prl-body-product">
-                        <p>'.$element[0].'</p>
-                        <p>'.$element[1].'</p>
-                        <p>'.$element[2].'</p>
-                        <p>'.$element[3].'</p>
+                        <p>'.$element["sku"].'</p>
+                        <p>'.$element["name"].'</p>
+                        <p>'.$element["price"].' $</p>
+                        <p>Size: '.$element["parameters"].' MB </p>
                     </div>
             </div>';
     }

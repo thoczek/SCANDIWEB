@@ -20,4 +20,10 @@ class SiteController{
         $view->productAdd($parameters);
         $view->render();
     }
+    public function productAddform($parameters)
+    {
+        $view = new SiteView();
+        $view->productAddform($parameters);
+        $view->render();
+    }
 }

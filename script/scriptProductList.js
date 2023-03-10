@@ -1,10 +1,9 @@
 // Display form on page load
-jQuery(window).on("ready", queryProductList());
-
-//Display form on selector change
-$(document).ready(function(){
+$(function(){
+    console.log("DOM Ready");
+    queryProductList()
     $('#submit').on('click',queryProductList());
-      });
+});
 
 function queryProductList(){ 
         $.ajax({
