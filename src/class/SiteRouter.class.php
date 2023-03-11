@@ -1,7 +1,10 @@
 <?php
 
+/****************************
+ * Summary of SiteRouter
+ */
 class SiteRouter{
-    /*************************************************************************************
+    /****************************
      * Summary of routes
      * @routes - array of defined routes in following way:
      * routes[key]=> array(RouteControllerClass, routeColtrollerMethod)
@@ -13,10 +16,14 @@ class SiteRouter{
 		$this->routes[$routePattern] = array($routeController, $routeAction);
         //echo var_dump($this->routes);
 	}
-
+    
+    /****************************
+    * Summary of getRoutes
+    * @return void
+    */
 	public function getRoutes() {
         echo $_SERVER["REQUEST_URI"]."<br>";
-		var_dump($this->routes);
+		//var_dump($this->routes);
 	}
 
 	public function route($currentRoute) {

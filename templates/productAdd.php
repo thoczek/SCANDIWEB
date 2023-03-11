@@ -6,7 +6,7 @@
             <div class="button-wrapper">
                 <div class="button-container">
                 <form action="/" method="post"> 
-                    <input type="submit" value="SAVE" id="delete-product-btn" class="header-button">
+                    <input type="button" value="SAVE" id="save-button" class="header-button">
                 </form>
                 <a href="/" class="header-button">CANCEL</a>
                 </div>

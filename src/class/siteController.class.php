@@ -26,4 +26,10 @@ class SiteController{
         $view->productAddform($parameters);
         $view->render();
     }
+    public function productAddDatabase($parameters)
+    {
+        $model = new SiteModel();
+        $model->addProduct($GLOBALS['database'],$parameters);
+        
+    }
 }
