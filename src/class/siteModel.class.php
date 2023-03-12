@@ -17,8 +17,26 @@ class SiteModel extends Dba{
         $stmt->bindValue(":type",$_POST["productType"]);
         $stmt->bindValue(":parameters",$_POST["parameters"]);
         $stmt->execute();
+        
+    }
+    public function deleteProduct($database,$data){
+        $sql="DELETE FROM products WHERE id IN (:id)";
+        $pdo=$this->connect($database);
+        $stmt=$pdo->prepare($sql);
+        $ids=$_POST["delete-checkbox"][$rowNum=0];
+        for($rowNum=1;$rowNum<count($_POST["delete-checkbox"]);$rowNum++)
+        {
+            $ids=$ids.", ".$_POST["delete-checkbox"][$rowNum];
+            // echo $_POST["delete-checkbox"][$rowNum]."<br>";
+        }
+        $stmt->bindValue(":id",$ids);
+        $stmt->execute();
+
+        echo "DELETE FROM products WHERE id IN (".$ids.")";
+        // foreach($_POST["delete-checkbox"] as $id)
+        // {
+        //      echo $id."<br>";
+        //  }
+        //print_r( $_REQUEST);
     }
 }
-
-
-// INSERT INTO `products` (`id`, `sku`, `name`, `price`, `type`, `parameters`) VALUES (NULL, 'Test', 'test', '1.00', 'DVD', '1234');

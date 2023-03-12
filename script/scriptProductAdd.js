@@ -17,10 +17,11 @@ function queryFormContent(){
                 productType:$('#productType').val()
             },
             success : function(result){
-                $( '.ajax-form' ).html( $('#productType').val() );
+                //$( '.ajax-form' ).html( $('#productType').val() );
                 $( '.ajax-form' ).html( result );
             },
             error : function() {
+                
                 $( '.ajax-form' ).html( $('#productType').val() );
             }
         }); 

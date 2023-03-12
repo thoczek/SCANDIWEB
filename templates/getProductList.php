@@ -2,7 +2,7 @@
 <?php   
     foreach ($this->result as $element) {
         echo '<div class="prl-body-product-wrapper"> 
-                    <input type="checkbox" class="delete-checkbox">
+                    <input type="checkbox"  form="formDelete" class="delete-checkbox" name="delete-checkbox[]" value="'.$element["id"].'">
                     <div class="prl-body-product">
                         <p>'.$element["sku"].'</p>
                         <p>'.$element["name"].'</p>

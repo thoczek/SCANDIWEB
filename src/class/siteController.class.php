@@ -14,6 +14,11 @@ class SiteController{
         $view->getProductList($parameters);
         $view->render();
     }
+    public function deleteProducts($parameters)
+    {
+        $model = new SiteModel();
+        $model->deleteProduct($GLOBALS['database'],$parameters);
+    }
     public function productAdd($parameters)
     {
         $view = new SiteView();
