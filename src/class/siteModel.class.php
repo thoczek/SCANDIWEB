@@ -22,21 +22,12 @@ class SiteModel extends Dba{
     public function deleteProduct($database,$data){
         $sql="DELETE FROM products WHERE id IN (:id)";
         $pdo=$this->connect($database);
-        $stmt=$pdo->prepare($sql);
         $ids=$_POST["delete-checkbox"][$rowNum=0];
         for($rowNum=1;$rowNum<count($_POST["delete-checkbox"]);$rowNum++)
         {
             $ids=$ids.", ".$_POST["delete-checkbox"][$rowNum];
-            // echo $_POST["delete-checkbox"][$rowNum]."<br>";
         }
-        $stmt->bindValue(":id",$ids);
-        $stmt->execute();
-
-        echo "DELETE FROM products WHERE id IN (".$ids.")";
-        // foreach($_POST["delete-checkbox"] as $id)
-        // {
-        //      echo $id."<br>";
-        //  }
-        //print_r( $_REQUEST);
+        $pdo->query("DELETE FROM products WHERE id IN (".$ids.")");
+        //echo "DELETE FROM products WHERE id IN (".$ids.")";
     }
 }
