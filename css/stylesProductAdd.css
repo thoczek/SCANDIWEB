@@ -262,6 +262,11 @@ Header
   margin-left: 2rem;
   box-shadow: 3px 3px var(--secondary);
 }
+#save-button:disabled{
+  color:darkgrey;
+  border:1px solid darkgrey;
+  box-shadow: 3px 3px darkgrey;
+}
 /*-------------------------------------------------
 Main
 --------------------------------------------------*/
@@ -283,13 +288,16 @@ Main
 .form-input{
   margin-left:1rem;
 }
+#info-message{
+  color:red;
+  font-weight: 900;
+}
 .ajax-form-wrapper{
   display: flex;
   flex-direction:column;
 }
 .product-description{
   padding-top:1rem;
-
 }
 /*-------------------------------------------------
 Footer

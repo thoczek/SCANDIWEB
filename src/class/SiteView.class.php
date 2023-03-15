@@ -13,6 +13,10 @@ class SiteView{
         if(file_exists($this->siteFooter)){
         include($this->siteFooter);};
     }
+    public function jsonFeedback($feedback)
+    {
+        echo json_encode($feedback);
+    }
     public function productList($parameters)
     {
         $this->siteHeader="templates/headerProductList.php";

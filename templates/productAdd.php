@@ -4,24 +4,23 @@
         <div class="header-wrapper">
             <div class="header-title"><h1>Product Add</h1></div>
             <div class="button-wrapper">
-                <div class="button-container">
-                <form action="/" method="post"> 
-                    <input type="button" value="SAVE" id="save-button" class="header-button">
-                </form>
+                <div class="button-container"> 
+                    <input type="submit" value="SAVE" id="save-button" class="header-button" form="product_form" >
                 <a href="/" class="header-button">CANCEL</a>
                 </div>
             </div>
         </div>
         <div class="body-wrapper">
-            <form id="product_form" method="post"></form>
+            <form id="product_form" method="post" action="add/">
+                <div class="sku-wrapper, form-inputs"><span></span><span id="info-message"> <!--SKU message goes here--></span></div> 
                 <div class="sku-wrapper, form-inputs">
-                    <label for="sku" class="form-label">SKU</label><input type="text" name="form_sku" id="sku" class="form-input">
+                    <label for="sku" class="form-label">SKU</label><input type="text" name="form_sku" id="sku" class="form-input"  placeholder="Unique id code" required>
                 </div>
                 <div class="name-wrapper, form-inputs">
-                    <label for="name" class="form-label">Name</label><input type="text" name="form_name" id="name" class="form-input">
+                    <label for="name" class="form-label">Name</label><input type="text" name="form_name" id="name" class="form-input" placeholder="Product name" required>
                 </div>
                 <div class="price-wrapper, form-inputs">
-                    <label for="price" class="form-label">Price(&dollar;)</label><input type="text" name="form_price" id="price" class="form-input">
+                    <label for="price" class="form-label">Price(&dollar;)</label><input type="number" name="form_price" id="price" class="form-input" min="0" placeholder="Price" required>
                 </div>
                 <div class="type-switcher-wrapper, form-inputs">
                     <label for="productType" class="form-label">Type Switcher</label>

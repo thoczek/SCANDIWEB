@@ -17,7 +17,7 @@ class SiteController{
     public function deleteProducts($parameters)
     {
         $model = new SiteModel();
-        $model->deleteProduct($GLOBALS['database'],$parameters);
+        $model->deleteProduct($parameters,$GLOBALS['database']);
     }
     public function productAdd($parameters)
     {
@@ -31,10 +31,17 @@ class SiteController{
         $view->productAddform($parameters);
         $view->render();
     }
+    public function checkSkuUnique($parameters)
+    {
+        $model = new SiteModel();
+        $result=$model->checkSkuUnique($parameters,$GLOBALS['database']);
+        $view = new SiteView();
+        $view->jsonFeedback($result);
+    }
     public function productAddDatabase($parameters)
     {
         $model = new SiteModel();
-        $model->addProduct($GLOBALS['database'],$parameters);
+        $model->addProduct($parameters,$GLOBALS['database']);
         
     }
 }
