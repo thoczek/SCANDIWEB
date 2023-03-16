@@ -1,4 +1,7 @@
 
+//*********************************************************/
+//Display default form and bind events
+//*********************************************************/
 $(function(){
     console.log('DOM Ready');
     queryFormContent();
@@ -8,6 +11,9 @@ $(function(){
       }
 );
 
+//*********************************************************/
+//Check is sku unique
+//*********************************************************/
 function checkSkuUnique(){
     console.log('check SKU');
     $.ajax({
@@ -20,11 +26,11 @@ function checkSkuUnique(){
         success : function(result){
             if(result==1)
             {
-                $( '#info-message' ).html( "Sku is not unique" );
+                $('#info-message').html( "Sku is not unique" );
                 $('#save-button').prop('disabled', true);
                 return;
             }
-            $( '#info-message' ).html( "" );
+            $('#info-message').html( "" );
             $('#save-button').prop('disabled', false);
         },
         error : function() {
@@ -33,6 +39,10 @@ function checkSkuUnique(){
     }); 
     return false;
 }
+
+//*********************************************************/
+//Display form 
+//*********************************************************/
 function queryFormContent(){ 
     console.log('change');
     $.ajax({
@@ -43,21 +53,20 @@ function queryFormContent(){
             productType:$('#productType').val()
         },
         success : function(result){
-            //$( '.ajax-form' ).html( $('#productType').val() );
             $( '.ajax-form' ).html( result );
         },
         error : function() {
-            
             $( '.ajax-form' ).html( $('#productType').val() );
         }
     }); 
     return false;
 }
 
+//*********************************************************/
+//Add product and redirect to main page
+//*********************************************************/
 function addProduct(){
     console.log("submit");
-    //onsubmit="event.preventDefault();"
-    //$( '.ajax-form' ).html( $('#sku').val() );
     var parameters;
     if($('#info-message').val() != "Sku is not unique")
     {
@@ -82,7 +91,6 @@ function addProduct(){
                 parameters:parameters
             },
             success : function(result){
-                //$('.footer-wrapper').html(result);
                 console.log('Data saved');
                 window.location = "../";
             },

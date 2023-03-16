@@ -1,6 +1,14 @@
 <?php
 
+/**
+ * Summary of Dba
+ */
 abstract class Dba{
+    /**
+     * Summary of connect
+     * @param mixed $database
+     * @return PDO
+     */
     protected function connect($database){
         $dsn="mysql:host=".$database["host"].";dbname=".$database["dbname"];
         $pdo=new PDO($dsn,$database["user"],$database["password"]);

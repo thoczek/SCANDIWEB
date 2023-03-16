@@ -1,21 +1,37 @@
 <?php
+/******************************************************/
 //Include config
-$configVariables=include("config/config.php");
-
+include_once("config/config.php");
+/******************************************************/
  //Include autoloader
 include_once("src/autoloader.php");
 
+/******************************************************/
 // Define the routes
 $router= new SiteRouter();
 
-$router->setRoute('/^\/addProduct\/$/',"SiteController","productAdd");                      //Main page
+/******************************************************/
+//Requests on main page
+/******************************************************/
+$router->setRoute('/^\/addProduct\/$/',"SiteController","productAdd");                      //Product add page
 $router->setRoute('/^\/addProduct\/form\/$/',"SiteController","productAddForm");            //Ajax form for specyfic product type
 $router->setRoute('/^\/addProduct\/add\/$/',"SiteController","productAddDatabase");         //Ajax add product to database
-$router->setRoute('/^\/addProduct\/checkSkuUnique\/$/',"SiteController","checkSkuUnique");    //Ajax check sku unique
+$router->setRoute('/^\/addProduct\/checkSkuUnique\/$/',"SiteController","checkSkuUnique");  //Ajax check sku unique
 
-$router->setRoute('/^\/deleteProducts\/$/',"SiteController","deleteProducts");         //Detete products
-$router->setRoute('/^\/$/',"SiteController","productList");                      //Main site page 
-$router->setRoute('/^\/getProductList\/$/',"SiteController","getProductList");      //Ajax load product list          
+/******************************************************/
+//Requests related with adding products
+/******************************************************/
+$router->setRoute('/^\/$/',"SiteController","productList");                                 //Main site page
+$router->setRoute('/^\/getProductList\/$/',"SiteController","getProductList");              //Ajax load product list  
+$router->setRoute('/^\/deleteProducts\/$/',"SiteController","deleteProducts");              //Detete 
+
+/******************************************************/
+//Dispaly routes for test purposes only
+/******************************************************/
 //$router->getRoutes();
+
+/******************************************************/
+//Route
+/******************************************************/
 $router->route($_SERVER["REQUEST_URI"]);
 ?>

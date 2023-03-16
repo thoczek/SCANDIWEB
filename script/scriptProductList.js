@@ -1,4 +1,6 @@
-// Display form on page load
+//*********************************************************/
+// Display form on page load and bind events
+//*********************************************************/
 $(function(){
     console.log("DOM Ready");
     queryProductList();
@@ -6,15 +8,16 @@ $(function(){
     }
 );
 
+//*********************************************************/
+//Dispaly product list on page
+//*********************************************************/
 function queryProductList(){ 
         console.log("Query product list");
         $.ajax({
             type : 'POST',
             url : 'getProductList/',
             dataType : 'html',
-            data: {
-                email : $('#email').val()
-            },
+            data: {},
             success : function(result){
                 $( "div.body-wrapper" ).html( result );
             },
@@ -24,7 +27,9 @@ function queryProductList(){
         }); 
         return false;
 }
-
+//*********************************************************/
+//Delete selected products
+//*********************************************************/
 function deleteProducts(){ 
     var formData = $('#formDelete').serializeArray();
     console.log("Delete");
