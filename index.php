@@ -13,10 +13,10 @@ $router= new SiteRouter();
 /******************************************************/
 //Requests on main page
 /******************************************************/
-$router->setRoute('/^\/addProduct\/$/',"SiteController","productAdd");                      //Product add page
-$router->setRoute('/^\/addProduct\/form\/$/',"SiteController","productAddForm");            //Ajax form for specyfic product type
-$router->setRoute('/^\/addProduct\/add\/$/',"SiteController","productAddDatabase");         //Ajax add product to database
-$router->setRoute('/^\/addProduct\/checkSkuUnique\/$/',"SiteController","checkSkuUnique");  //Ajax check sku unique
+$router->setRoute('/^\/add-product\/$/',"SiteController","productAdd");                      //Product add page
+$router->setRoute('/^\/add-product\/form\//',"SiteController","productAddForm");            //Ajax form for specyfic product type
+$router->setRoute('/^\/add-product\/add\//',"SiteController","productAddDatabase");         //Ajax add product to database
+$router->setRoute('/^\/add-product\/checkSkuUnique\//',"SiteController","checkSkuUnique");  //Ajax check sku unique
 
 /******************************************************/
 //Requests related with adding products

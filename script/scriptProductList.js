@@ -32,15 +32,14 @@ function queryProductList(){
 //*********************************************************/
 function deleteProducts(){ 
     var formData = $('#formDelete').serializeArray();
-    console.log("Delete");
-    console.log(formData);
     $.ajax({
         type : 'POST',
         url : 'deleteProducts/',
         dataType : 'html',
         data: formData,
         success : function(result){
-            $( ".footer-wrapper" ).html( result );
+            console.log("Delete");
+            console.log(formData);
         },
         error : function() {
             $( "div.body-wrapper" ).html( "Error fetching data please reload page" );

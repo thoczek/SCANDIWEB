@@ -35,6 +35,7 @@ function checkSkuUnique(){
         },
         error : function() {
             $( '#info-message' ).html( 'Error sku check' )
+            $('#save-button').prop('disabled', true);
         }
     }); 
     return false;
@@ -53,9 +54,12 @@ function queryFormContent(){
             productType:$('#productType').val()
         },
         success : function(result){
+            console.log('change success');
             $( '.ajax-form' ).html( result );
+            //$( '.ajax-form' ).html( $('#productType').val() );
         },
         error : function() {
+            console.log('change fail');
             $( '.ajax-form' ).html( $('#productType').val() );
         }
     }); 
@@ -101,4 +105,6 @@ function addProduct(){
     }
     return false;
 }
-
+//*********************************************************/
+//Custom form validation messages
+//*********************************************************/

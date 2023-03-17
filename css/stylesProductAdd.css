@@ -235,6 +235,9 @@ Header
   border-bottom: 1px solid var(--secondary);
   /* border: 1px solid blue; */
 }
+.header-title{
+  animation: flick 1s 0.1s both;
+}
 .button-wrapper{
   display: flex;
   flex-direction: row;
@@ -261,6 +264,11 @@ Header
   font-weight: 500;
   margin-left: 2rem;
   box-shadow: 3px 3px var(--secondary);
+  transition: all 0.5s ease-out ;
+}
+.header-button:hover{
+  color:var(--primary);
+  background-color: var(--secondary);
 }
 #save-button:disabled{
   color:darkgrey;
@@ -313,5 +321,107 @@ border-top: 1px solid var(--secondary);
 Media Queries
 --------------------------------------------------*/
 
-@media (max-width: 69rem) {
+@media (max-width: 1250px) {
+
+  .content-wrapper{
+    width:100%;
+    padding: 1rem;
+  }
+}
+
+
+@keyframes flick {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 0;
+  }
+  10.1% {
+    opacity: 1;
+  }
+  10.2% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  20.1% {
+    opacity: 1;
+  }
+  20.6% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0;
+  }
+  30.1% {
+    opacity: 1;
+  }
+  30.5% {
+    opacity: 1;
+  }
+  30.6% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 0;
+  }
+  45.1% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 1;
+  }
+  55.1% {
+    opacity: 0;
+  }
+  57% {
+    opacity: 0;
+  }
+  57.1% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  60.1% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0;
+  }
+  65.1% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  75.1% {
+    opacity: 0;
+  }
+  77% {
+    opacity: 0;
+  }
+  77.1% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  85.1% {
+    opacity: 0;
+  }
+  86% {
+    opacity: 0;
+  }
+  86.1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }

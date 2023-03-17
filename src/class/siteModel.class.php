@@ -35,11 +35,11 @@ class SiteModel extends Dba{
             $sql="INSERT INTO products (id, sku, name, price, type, parameters) VALUES (NULL, :sku, :name, :price, :type, :parameters)";
             $pdo=$this->connect($database);
             $stmt=$pdo->prepare($sql);
-            $stmt->bindValue(":sku",$_POST["sku"]);
-            $stmt->bindValue(":name",$_POST["name"]);
-            $stmt->bindValue(":price",$_POST["price"]);
-            $stmt->bindValue(":type",$_POST["productType"]);
-            $stmt->bindValue(":parameters",$_POST["parameters"]);
+            $stmt->bindValue(":sku",$this->validateInput($_POST["sku"]));
+            $stmt->bindValue(":name",$this->validateInput($_POST["name"]));
+            $stmt->bindValue(":price",$this->validateInput($_POST["price"]));
+            $stmt->bindValue(":type",$this->validateInput($_POST["productType"]));
+            $stmt->bindValue(":parameters",$this->validateInput($_POST["parameters"]));
             $stmt->execute();
             return 1;
         }

@@ -5,7 +5,7 @@
             <div class="header-title"><h1>Product List</h1></div>
             <div class="button-wrapper">
                 <div class="button-container">
-                    <a href="/addProduct/" class="header-button">ADD</a>
+                    <a href="/add-product/" class="header-button">ADD</a>
                     <form id="formDelete"> 
                         <input type="button" value="MASS DELETE" id="delete-product-btn" class="header-button">
                     </form>
@@ -19,7 +19,7 @@
             </div>
                     
         <div class="footer-wrapper">
-        Scandiweb Test assignment 
+        <span class="footer-text"> Scandiweb Test assignment</span> 
         </div>
     </div>
 </div>

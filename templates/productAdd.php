@@ -36,7 +36,7 @@
             </form> 
         </div>
         <div class="footer-wrapper">
-        Scandiweb Test assignment 
+        <span class="footer-text"> Scandiweb Test assignment</span> 
         </div>
     </div>
 </div>

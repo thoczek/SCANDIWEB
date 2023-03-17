@@ -16,4 +16,10 @@ abstract class Dba{
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         return $pdo;
     }
+    protected function validateInput($inputData){
+    $inputData = trim($inputData);
+    $inputData = stripslashes($inputData);
+    $inputData = htmlspecialchars($inputData);
+    return $inputData;
+    }
 }

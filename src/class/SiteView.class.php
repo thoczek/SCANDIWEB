@@ -20,14 +20,23 @@ class SiteView{
      */
     public function render()
     {
-        if(file_exists($this->siteHeader)){
-            include($this->siteHeader);};
-        
-        if(file_exists($this->siteBody)){
-            include($this->siteBody);};
+        //Include header
+        if(file_exists($this->siteHeader))
+        {
+            include($this->siteHeader);
+        }
 
-        if(file_exists($this->siteFooter)){
-            include($this->siteFooter);};
+        //Include body
+        if(file_exists($this->siteBody))
+        {
+            include($this->siteBody);
+        }
+
+        //Include footer
+        if(file_exists($this->siteFooter))
+        {
+            include($this->siteFooter);
+        }
     }
     /******************************************************/
     /**
@@ -85,17 +94,24 @@ class SiteView{
      */
     public function productAddform($parameters)
     {
-        if($_POST['productType']==="DVD"){
-            $this->siteBody="templates/productAddformDVD.php";
+        if($this->validateInput($_POST['productType']=="DVD")){     //DVD
+            $this->siteBody="templates/productAddFormDVD.php";
             return;
         }
-        if($_POST['productType']==="Furniture"){
-            $this->siteBody="templates/productAddformFurniture.php";
+        if($this->validateInput($_POST['productType']=="Furniture")){     //Furniture
+            $this->siteBody="templates/productAddFormFurniture.php";
             return;
         }
-        if($_POST['productType']==="Book"){
-            $this->siteBody="templates/productAddformBook.php";
+        if($this->validateInput($_POST['productType']=="Book")){     //Book
+            $this->siteBody="templates/productAddFormBook.php";
             return;
         }
+    }
+    protected function validateInput($inputData)
+    {
+        $inputData = trim($inputData);
+        $inputData = stripslashes($inputData);
+        $inputData = htmlspecialchars($inputData);
+        return $inputData;
     }
 }

@@ -31,7 +31,6 @@ class SiteRouter{
     * @return void
     */
 	public function getRoutes() {
-        
         echo $_SERVER["REQUEST_URI"]."<br>";
         print_r($this->routes);
 	}
