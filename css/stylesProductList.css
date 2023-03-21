@@ -297,7 +297,7 @@ Main
   transition: transform 1s ease-out 0.4s;
 }
 .prl-body-product-wrapper:hover{
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 .prl-body-product{
   display: flex;
@@ -328,7 +328,11 @@ border-top: 1px solid var(--secondary);
 /*-------------------------------------------------
 Media Queries
 --------------------------------------------------*/
-
+@media (max-width: 1220px) {
+  .prl-body-product-wrapper:hover{
+    transform: unset;
+  }
+}
 @media (max-width: 1205px) {
 
   .content-wrapper{

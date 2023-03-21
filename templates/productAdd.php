@@ -5,8 +5,8 @@
             <div class="header-title"><h1>Product Add</h1></div>
             <div class="button-wrapper">
                 <div class="button-container"> 
-                    <input type="submit" value="SAVE" id="save-button" class="header-button" form="product_form" >
-                <a href="/" class="header-button">CANCEL</a>
+                    <input type="submit" value="Save" id="save-button" class="header-button" form="product_form" >
+                <a href="/" class="header-button">Cancel</a>
                 </div>
             </div>
         </div>
@@ -25,9 +25,9 @@
                 <div class="type-switcher-wrapper, form-inputs">
                     <label for="productType" class="form-label">Type Switcher</label>
                     <select name="form_product_type" id="productType" class="form-input">
-                        <option id="DVD" selected="selected">DVD</option>
-                        <option id="Furniture">Furniture</option>
-                        <option id="Book">Book</option>
+                        <option selected>DVD</option>
+                        <option>Furniture</option>
+                        <option>Book</option>
                     </select>
                 </div>
                 <div class="ajax-form">

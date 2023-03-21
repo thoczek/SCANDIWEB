@@ -78,7 +78,7 @@ function addProduct(){
             parameters=$('#size').val();
         }
         if($('#productType').val()=='Furniture'){
-            parameters=$('#height').val()+'x'+$('#width').val()+'x'+$('#lenght').val();
+            parameters=$('#height').val()+'x'+$('#width').val()+'x'+$('#length').val();
         }
         if($('#productType').val()=='Book'){
             parameters=$('#weight').val();
