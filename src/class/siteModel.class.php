@@ -4,7 +4,8 @@
  * Summary of SiteModel
  * Class for fetching and other operaions on database
  */
-class SiteModel extends Dba{
+class SiteModel extends Dba
+{
     /******************************************************/
     /**
      * Summary of getAllProducts
@@ -26,10 +27,10 @@ class SiteModel extends Dba{
      * @return int
      */
     public function addProduct($data,$database){
-        if(isset($_POST["sku"]) && 
-            isset($_POST["name"]) && 
-            isset($_POST["price"]) && 
-            isset($_POST["productType"]) && 
+        if(isset($_POST["sku"]) &&
+            isset($_POST["name"]) &&
+            isset($_POST["price"]) &&
+            isset($_POST["productType"]) &&
             isset($_POST["parameters"]))
         {
             $sql="INSERT INTO products (id, sku, name, price, type, parameters) VALUES (NULL, :sku, :name, :price, :type, :parameters)";
@@ -65,7 +66,7 @@ class SiteModel extends Dba{
             $pdo->query("DELETE FROM products WHERE id IN (".$ids.")");
         }
     }
-    /******************************************************/ 
+    /******************************************************/
     /**
      * Summary of checkSkuUnique
      * @param mixed $data
@@ -87,5 +88,4 @@ class SiteModel extends Dba{
         }
         return 0;
     }
-
 }

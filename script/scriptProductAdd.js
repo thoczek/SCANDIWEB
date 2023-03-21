@@ -37,14 +37,14 @@ function checkSkuUnique(){
             $( '#info-message' ).html( 'Error sku check' )
             $('#save-button').prop('disabled', true);
         }
-    }); 
+    });
     return false;
 }
 
 //*********************************************************/
 //Display form 
 //*********************************************************/
-function queryFormContent(){ 
+function queryFormContent(){
     console.log('change');
     $.ajax({
         type : 'POST',
@@ -62,12 +62,12 @@ function queryFormContent(){
             console.log('change fail');
             $( '.ajax-form' ).html( $('#productType').val() );
         }
-    }); 
+    });
     return false;
 }
 
 //*********************************************************/
-//Add product and redirect to main page 
+//Add product and redirect to main page
 //*********************************************************/
 function addProduct(){
     console.log("submit");
@@ -101,10 +101,7 @@ function addProduct(){
             error : function(result) {
                 console.log('Error saving data');
             }
-        }); 
+        });
     }
     return false;
 }
-//*********************************************************/
-//Custom form validation messages
-//*********************************************************/

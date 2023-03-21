@@ -6,7 +6,8 @@
  * 
  * *
  **********************************************************/
-class SiteView{
+class SiteView
+{
     /******************************************************/
     /**
      * Summary of result
@@ -94,15 +95,15 @@ class SiteView{
      */
     public function productAddform($parameters)
     {
-        if($this->validateInput($_POST['productType']=="DVD")){     //DVD
+        if($this->validateInput($_POST['productType']=="DVD")){
             $this->siteBody="templates/productAddFormDVD.php";
             return;
         }
-        if($this->validateInput($_POST['productType']=="Furniture")){     //Furniture
+        if($this->validateInput($_POST['productType']=="Furniture")){
             $this->siteBody="templates/productAddFormFurniture.php";
             return;
         }
-        if($this->validateInput($_POST['productType']=="Book")){     //Book
+        if($this->validateInput($_POST['productType']=="Book")){
             $this->siteBody="templates/productAddFormBook.php";
             return;
         }

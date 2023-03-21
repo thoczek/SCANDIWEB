@@ -1,10 +1,12 @@
 <?php
+
 /******************************************************/
 /**
  * Summary of SiteRouter
  * Class for routing html adresses to desired actions 
  */
-class SiteRouter{
+class SiteRouter
+{
     /******************************************************/
   	/**
     * Summary of routes

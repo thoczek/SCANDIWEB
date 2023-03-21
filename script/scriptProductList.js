@@ -11,7 +11,7 @@ $(function(){
 //*********************************************************/
 //Dispaly product list on page 
 //*********************************************************/
-function queryProductList(){ 
+function queryProductList(){
         console.log("Query product list");
         $.ajax({
             type : 'POST',
@@ -24,13 +24,13 @@ function queryProductList(){
             error : function() {
                 $( "div.body-wrapper" ).html( "Error fetching data please reload page" );
             }
-        }); 
+        });
         return false;
 }
 //*********************************************************/
 //Delete selected products
 //*********************************************************/
-function deleteProducts(){ 
+function deleteProducts(){
     var formData = $('#formDelete').serializeArray();
     $.ajax({
         type : 'POST',
@@ -44,10 +44,10 @@ function deleteProducts(){
         error : function() {
             $( "div.body-wrapper" ).html( "Error fetching data please reload page" );
         }
-    }); 
+    });
     setTimeout(function(){
         queryProductList();
-    }, 50); 
+    }, 50);
     
     return false;
 }

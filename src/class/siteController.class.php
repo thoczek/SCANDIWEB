@@ -3,7 +3,8 @@
 /**
  * Summary of SiteController
  */
-class SiteController{
+class SiteController
+{
     /******************************************************/
     /**
      * Summary of productList
@@ -64,7 +65,7 @@ class SiteController{
         $view->productAddform($parameters);
         $view->render();
     }
-    /******************************************************/ 
+    /******************************************************/
     /**
      * Summary of checkSkuUnique
      * @param mixed $parameters
@@ -89,6 +90,5 @@ class SiteController{
     {
         $model = new SiteModel();
         $model->addProduct($parameters,$GLOBALS['database']);
-        
     }
 }
