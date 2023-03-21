@@ -13,7 +13,10 @@ class SiteView
      * Summary of result
      * @var string - variable contain filename of templates wich be included for header body and footer of webpage
      */
-    private $siteHeader="", $siteBody="", $siteFooter="", $result;
+    private $siteHeader="";
+    private $siteBody="";
+    private $siteFooter=""; 
+    private $result;
     /******************************************************/
     /**
      * Summary of render
