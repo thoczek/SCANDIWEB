@@ -1,2 +1,11 @@
 # SCANDIWEB
- PHP OOP Webpage implementing simple MVC framework
+Product database implementing with simple MVC framework.
+- PHP
+- JS
+- HTML
+- CSS
+- MySQL
+- JQUERY
+- AJAX
+- MVC
+- OOP
