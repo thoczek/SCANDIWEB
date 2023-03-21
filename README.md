@@ -5,7 +5,7 @@ Simple product database
 - HTML
 - CSS
 - MySQL
-- JQUERY
+- jQUERY
 - AJAX
 - MVC
 - OOP
