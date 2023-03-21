@@ -1,5 +1,5 @@
-# SCANDIWEB
-Product database implementing with simple MVC framework.
+# SCANDIWEB - Test Assignment
+Simple product database 
 - PHP
 - JS
 - HTML
