@@ -64,7 +64,7 @@ class SiteController{
         $view->productAddform($parameters);
         $view->render();
     }
-    /******************************************************/
+    /******************************************************/ 
     /**
      * Summary of checkSkuUnique
      * @param mixed $parameters

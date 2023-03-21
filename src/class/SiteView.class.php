@@ -86,7 +86,7 @@ class SiteView{
         $this->siteBody="templates/productAdd.php";
         $this->siteFooter="templates/footer.php";
     }
-    /******************************************************/
+    /******************************************************/ 
     /**
      * Summary of productAddform
      * @param mixed $parameters

@@ -67,7 +67,7 @@ function queryFormContent(){
 }
 
 //*********************************************************/
-//Add product and redirect to main page
+//Add product and redirect to main page 
 //*********************************************************/
 function addProduct(){
     console.log("submit");

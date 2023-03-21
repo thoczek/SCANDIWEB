@@ -9,7 +9,7 @@ $(function(){
 );
 
 //*********************************************************/
-//Dispaly product list on page
+//Dispaly product list on page 
 //*********************************************************/
 function queryProductList(){ 
         console.log("Query product list");

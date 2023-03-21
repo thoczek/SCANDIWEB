@@ -6,7 +6,7 @@
 abstract class Dba{
     /**
      * Summary of connect
-     * @param mixed $database
+     * @param mixed $database 
      * @return PDO
      */
     protected function connect($database){

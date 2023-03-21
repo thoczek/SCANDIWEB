@@ -65,7 +65,7 @@ class SiteModel extends Dba{
             $pdo->query("DELETE FROM products WHERE id IN (".$ids.")");
         }
     }
-    /******************************************************/
+    /******************************************************/ 
     /**
      * Summary of checkSkuUnique
      * @param mixed $data

@@ -11,7 +11,7 @@ include_once("src/autoloader.php");
 $router= new SiteRouter();
 
 /******************************************************/
-//Requests on main page
+//Requests related with adding products
 /******************************************************/
 $router->setRoute('/^\/add-product\/$/',"SiteController","productAdd");                      //Product add page
 $router->setRoute('/^\/add-product\/form\//',"SiteController","productAddForm");            //Ajax form for specyfic product type
@@ -19,11 +19,11 @@ $router->setRoute('/^\/add-product\/add\//',"SiteController","productAddDatabase
 $router->setRoute('/^\/add-product\/checkSkuUnique\//',"SiteController","checkSkuUnique");  //Ajax check sku unique
 
 /******************************************************/
-//Requests related with adding products
+//Requests on main page
 /******************************************************/
 $router->setRoute('/^\/$/',"SiteController","productList");                                 //Main site page
 $router->setRoute('/^\/getProductList\/$/',"SiteController","getProductList");              //Ajax load product list  
-$router->setRoute('/^\/deleteProducts\/$/',"SiteController","deleteProducts");              //Detete 
+$router->setRoute('/^\/deleteProducts\/$/',"SiteController","deleteProducts");              //Delete
 
 /******************************************************/
 //Dispaly routes for test purposes only

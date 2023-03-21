@@ -34,7 +34,7 @@ class SiteRouter{
         echo $_SERVER["REQUEST_URI"]."<br>";
         print_r($this->routes);
 	}
-    /******************************************************/
+    /******************************************************/ 
 	/**
 	 * Summary of route
      * Routes current request

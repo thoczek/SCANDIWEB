@@ -11,7 +11,7 @@
     <title>Product List</title>
       <meta
       name="description"
-      content="................."
+      content="Junior Developer Test Task"
     />
     <meta
       name="keywords"
